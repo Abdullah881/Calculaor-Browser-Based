@@ -7,7 +7,7 @@ const Calculator = {
     // Create a const to hold the first operand, set to null initially
     First_Operand: null,
     // wait and check if second operand has been inputted 
-    Wait_Second_Operand: true,
+    Wait_Second_Operand: false,
     //Create a const to hold the operator, set to null initially
     operator: null,
 };
@@ -123,7 +123,7 @@ keys.addEventListener('click',(event) => {
     if (target.classList.contains('all-clear')){
         Calculator_Reset();
         Update_Display();
-        Calculator.Wait_Second_Operand = true;
+        //Calculator.Wait_Second_Operand = true;
         return;
     }
     Input_Digit(target.value);
